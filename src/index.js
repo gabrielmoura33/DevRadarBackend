@@ -1,3 +1,4 @@
+require('dotenv/config');
 const express = require('express');
 const mongoose = require("mongoose")
 const routes = require('./routes')
@@ -14,4 +15,4 @@ app.use(routes);
 
 
 
-app.listen(3333);
+app.listen(process.env.PORT || 3333);
